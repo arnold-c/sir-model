@@ -55,6 +55,7 @@ Most of the code is adapted from Ottar Bjornstad's *Epidemics: Models and Data i
 
 - [R version 4.2.1 (2022-06-23)](https://cran.r-project.org/bin/macosx/)
 - [`{renv}`](https://rstudio.github.io/renv/articles/renv.html) for package management
+- [`{deSolve}`](https://cran.r-project.org/web/packages/deSolve/index.html) for solving differential equations
 
 ### Getting Started
 
