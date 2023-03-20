@@ -22,10 +22,10 @@ The model is described by the following equations:
 \beta &= 2 \\
 \gamma &= \frac{1}{2} \\\\
 
-N &= 1000 \\
-S\_0 &= 999.0 \\
-I\_0 &= 1.0 \\
-R\_0 &= 0.0
+N &= 1.0 \\
+S_0 &= 0.999 \\
+I_0 &= 0.001 \\
+R_0 &= 0.0
 \end{align}
 ```
 
