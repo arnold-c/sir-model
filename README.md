@@ -3,7 +3,7 @@
 
 This is a test project to get used to using Git and GitHub.
 
-The purpose of this project is to create a SIR model in R.
+The purpose of this project is to create a frequency dependent SIR model in R.
 An SIR model is a model that describes the spread of a disease in a population, placing individuals in compartments based on their infection status.
 The compartments are susceptible (S), infected (I), and recovered (R).
 The model is described by the following equations:
