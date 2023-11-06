@@ -1,17 +1,18 @@
-## SIR Model
+## SEIR Model
 ### About This Project
 
 This is a test project to get used to using Git and GitHub.
 
-The purpose of this project is to create a SIR model in R.
-An SIR model is a model that describes the spread of a disease in a population, placing individuals in compartments based on their infection status.
-The compartments are susceptible (S), infected (I), and recovered (R).
+The purpose of this project is to create a SEIR model in R.
+An SEIR model is a model that describes the spread of a disease in a population, placing individuals in compartments based on their infection status.
+The compartments are susceptible (S), exposed (E), infected (I), and recovered (R).
 The model is described by the following equations:
 
 ```math
 \begin{align}
 \frac{dS}{dt} &= \mu (N - S) -\beta S \frac{I}{N} \\
-\frac{dI}{dt} &= \beta S \frac{I}{N} - \gamma I - \mu I \\
+\frac{dE}{dt} &= \beta S \frac{I}{N} - \sigma E \\
+\frac{dI}{dt} &= \sigma E - \gamma I - \mu I \\
 \frac{dR}{dt} &= \gamma I - \mu R
 \end{align}
 ```
@@ -20,19 +21,19 @@ The model is described by the following equations:
 \begin{align}
 \mu &= \frac{1}{50*52} \\
 \beta &= 2 \\
+\sigma &= 1 \\
 \gamma &= \frac{1}{2} \\\\
 
 N &= 1.0 \\
 S_0 &= 0.999 \\
+E_0 &= 0 \\
 I_0 &= 0.001 \\
 R_0 &= 0.0
 \end{align}
 ```
 
-Here, $\mu$ is the mortality and birth rate, $\beta$ is the contact rate multiplied by the per-contact transmission probability, and $\gamma$ is the recovery rate.
+Here, $\mu$ is the mortality and birth rate, $\beta$ is the contact rate multiplied by the per-contact transmission probability, $\sigma$ is the latent rate, and $\gamma$ is the recovery rate.
 The units for this are weeks, so the life expectancy is 50 years, and the duration of infection (inverse of recovery rate) is 2 weeks.
-
-Most of the code is adapted from Ottar Bjornstad's *Epidemics: Models and Data in R* (2018) book. You can find the code at his GitHub repository [here](https://github.com/objornstad/epimdr). Specifically, it uses code from chapter 2.
 
 ### Repository Structure
 
